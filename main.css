@@ -1,0 +1,9 @@
+.form_searchbox{
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+input[type=search]{
+
+}
