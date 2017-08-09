@@ -13,11 +13,29 @@ section{
   margin-right: auto;
 }
 
-figure{
+.search_giverecipes{
+  width: 250px;
+}
 
+.missing{
+  width: 100%;
+  border-radius: 8px;
+}
+
+figure{
+  background-color: lightgray;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.recipe_photo{
+  width: 100%;
+  border-radius: 8px;
 }
 
 figcaption{
+  font-size: small;
+  font-family: sans-serif, serif, Arial;
 
 }
 input[type=search]{

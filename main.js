@@ -21,7 +21,7 @@ console.log(givetoAPI);
 
   for (let i=0; i < givetoAPI.results.length; i++){
 
-    let backupImage = `<img src="http://via.placeholder.com/140x100"></a>`;
+    let backupImage = `<img class="missing" src="http://via.placeholder.com/140x100"></a>`;
     if (givetoAPI.results[i].thumbnail === ''){
       let missingPhoto = `
           <div class="search_giverecipes">
@@ -40,7 +40,7 @@ console.log(givetoAPI);
         <div class="search_giverecipes">
         <figure>
         <a href="${givetoAPI.results[i].href}" target="_blank">
-        <img src="${givetoAPI.results[i].thumbnail}"> </a>
+        <img class="recipe_photo" src="${givetoAPI.results[i].thumbnail}"> </a>
         <figcaption>${givetoAPI.results[i].title}</figcaption>
         <figure>
         </div>
