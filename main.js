@@ -5,20 +5,17 @@ let recipe_section = document.querySelector("section");
 // function that runs on event happening takes the text for the input box
 // puts that text into the url for the fetch
 
-search_load(find){
-  findValue = document.querySelector("input[type=submit]");
-  console.log("value");
-}
+// search_load(find){
+//   findValue = document.querySelector("input[type=submit]");
+//   console.log("value");
+// }
 
 function JSonMyWay(dropthatAPI){
   return dropthatAPI.json();
 }
 
 function recipes(givetoAPI){
-  console.log(givetoAPI);
-  console.log(givetoAPI.results[0].href);
-  console.log(givetoAPI.results[0].thumbnail);
-  console.log(givetoAPI.results[0].title);
+console.log(givetoAPI);
 
   let something = '';
 
@@ -42,7 +39,8 @@ function recipes(givetoAPI){
     let section = `
         <div class="search_giverecipes">
         <figure>
-        <a href="${givetoAPI.results[i].href}" target="_blank"><img src="${givetoAPI.results[i].thumbnail}"></a>
+        <a href="${givetoAPI.results[i].href}" target="_blank">
+        <img src="${givetoAPI.results[i].thumbnail}"> </a>
         <figcaption>${givetoAPI.results[i].title}</figcaption>
         <figure>
         </div>
@@ -62,11 +60,10 @@ function recipes(givetoAPI){
 }
 
 function ouch(err) {
-  console.log("Ouch! I'm not working right!");
   console.log(err);
 }
 
-fetch ("http://recipepuppyproxy.herokuapp.com/api/?q=")
+fetch ("http://recipepuppyproxy.herokuapp.com/api/?q=omelet")
   .then(JSonMyWay)
   .then(recipes)
   .catch(ouch);
