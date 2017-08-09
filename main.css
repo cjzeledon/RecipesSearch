@@ -1,9 +1,38 @@
 .form_searchbox{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid darkgray;
   padding-bottom: 30px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-input[type=search]{
+section{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+figure{
+
+}
+
+figcaption{
+
+}
+input[type=search]{
+  line-height: 3;
+  border-radius: 7px;
+  border: 1px solid darkgray;
+  padding-left: 10px;
+  font-size: 13px;
+  font-weight: lighter;
+  margin-left: 20px;
+}
+
+input[type=submit]{
+  line-height: 2.8;
+  border-radius: 7px;
+  border: 1px solid darkgray;
+  font-size: 13px;
 }
