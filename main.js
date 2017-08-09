@@ -1,11 +1,13 @@
 let body = document.querySelector("body");
 let recipe_section = document.querySelector("section");
+
 // create eventlistener for submit button
 // function that runs on event happening takes the text for the input box
 // puts that text into the url for the fetch
 
 search_load(find){
-  
+  findValue = document.querySelector("input[type=submit]");
+  console.log("value");
 }
 
 function JSonMyWay(dropthatAPI){
