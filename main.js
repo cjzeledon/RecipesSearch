@@ -1,5 +1,6 @@
 let body = document.querySelector("body");
 let recipe_section = document.querySelector("section");
+let submitBtn = document.querySelector("#submitButton");
 
 // create eventlistener for submit button
 // function that runs on event happening takes the text for the input box
@@ -63,7 +64,14 @@ function ouch(err) {
   console.log(err);
 }
 
-fetch ("http://recipepuppyproxy.herokuapp.com/api/?q=omelet")
-  .then(JSonMyWay)
-  .then(recipes)
-  .catch(ouch);
+submitBtn.addEventListener("click",
+  function(ev) {
+    ev.preventDefault();
+    let searchRecipes = document.querySelector("#FindRecipes").value;
+    console.log('button works');
+        // fetch (`https://itunes.apple.com/search?term=${searchSongs}`)
+    fetch (`http://recipepuppyproxy.herokuapp.com/api/?q=${searchRecipes}`)
+      .then(JSonMyWay)
+      .then(recipes)
+      .catch(ouch);
+  })
